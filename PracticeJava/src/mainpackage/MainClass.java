@@ -1,10 +1,12 @@
 package mainpackage;
 import StringDemo.*;
+import collectionsdemo.CollectionsDemo;
+import loops.LoopClass;
 
 public class MainClass {
 public static void main( String[] args) {
 	
-	System.out.print(LongestCommonSubstring.demo(""));
+	CollectionsDemo.demo();
 	
 }
 }
