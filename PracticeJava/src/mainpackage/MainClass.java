@@ -1,12 +1,12 @@
 package mainpackage;
-import classes.*;
+import lambdaexpressions.*;
 
 
 public class MainClass {
 	
 public static void main( String[] args) {
 	
-	OuterClass.main();
+	InterfaceWithLambda.main();
 	
 }
 }
