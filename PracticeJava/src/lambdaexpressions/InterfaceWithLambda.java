@@ -1,5 +1,7 @@
 package lambdaexpressions;
 
+import java.util.function.*;
+
 public class InterfaceWithLambda {
 	
 	public static void main() {
@@ -15,5 +17,15 @@ public class InterfaceWithLambda {
 	a.sound();
 	
 	
-	}
-}
+	java.util.function.BiConsumer<Integer, Integer> b = (i, j) -> System.out.println(i +" "+ j);
+	                                                              
+	b.accept(10, 20);
+	
+	java.util.function.Predicate<Integer> c ;
+	c = i -> true;
+	System.out.println(c.test(10));
+	c = i -> i < 5;
+	System.out.println(c.test(10));
+	}  // main method
+	
+}  //InterfaceWithLambda

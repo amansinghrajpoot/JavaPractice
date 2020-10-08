@@ -1,12 +1,12 @@
 package mainpackage;
-import lambdaexpressions.*;
+import streams.StreamDemo;
 
 
 public class MainClass {
 	
 public static void main( String[] args) {
 	
-	InterfaceWithLambda.main();
+	StreamDemo.main();
 	
 }
 }
