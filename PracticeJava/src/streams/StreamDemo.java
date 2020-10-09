@@ -45,6 +45,16 @@ public class StreamDemo {
 				.max();
 				
 		System.out.println("max age " + oi.getAsInt());
+		
+		ArrayList<Integer> aint = new ArrayList<Integer>() ;
+		aint.add(1); aint.add(2); aint.add(3); aint.add(4); aint.add(5); 
+		
+		long i1 = aint.stream()
+		.sorted()
+		.reduce(0, (subtotal, element) -> subtotal + element);
+		
+		System.out.println(i1);
+		
 	} //main
 	
 

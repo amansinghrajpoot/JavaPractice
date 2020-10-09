@@ -1,12 +1,12 @@
 package mainpackage;
-import streams.StreamDemo;
 
+import generics.Generics;
 
 public class MainClass {
 	
 public static void main( String[] args) {
 	
-	StreamDemo.main();
+	Generics.main();
 	
 }
 }
