@@ -1,0 +1,24 @@
+package default;
+
+
+public class Driver {
+	
+	public static void main(String a[]) throws IOException, ParseException {
+		
+		String str = "Let's meet l8r 2nite";
+		String[] words = null;
+		int cnt = 0;
+		
+		words = str.split("[ '0-9]");
+		
+		for(int i = 0; i < words.length; i ++) {
+			
+			if(words[i].matches("(?!^\\d+$)^.+$")) {
+				cnt++;
+			}
+		}
+		
+		System.out.println(cnt);
+	}
+
+}
