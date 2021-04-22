@@ -1,0 +1,52 @@
+public class Driver {
+	
+	public static void main(String args[]) {
+		
+		
+		String[] values = {"2,0", "1,3", "2,3", "1,0", "6,4", "5,7", "10,8", "7,11", "9,11", "11,12"};
+		Integer[][] pairs = new Integer[10][2];
+		String e[] = null;
+		for(int i = 0; i < values.length; i++) {   // To extract the integer values
+		    e = values[i].split(",");
+		    pairs[i][0] = Integer.parseInt(e[0]);
+		    pairs[i][1] = Integer.parseInt(e[1]);		
+		 }		
+	    Integer temp1;
+	    Integer temp2;
+	    
+		for(int i = 0; i < pairs.length; i++) {   // n^2 pass
+			for( int j= 0; j < pairs.length; j ++) {
+				
+				if (pairs[i][0] < pairs[j][0]) {
+					
+					temp1 = pairs[j][0];
+					temp2 = pairs[j][1];
+					
+					pairs[j][0] = pairs[i][0];
+					pairs[j][1] = pairs[i][1];
+					
+					pairs[i][0] = temp1;
+					pairs[i][1] = temp2;	
+				}
+				else if (pairs[i][0] == pairs[j][0]) {
+					
+					if (pairs[i][1] != pairs[j][1]) {;
+						temp2 = pairs[j][1];
+						
+						pairs[j][1] = pairs[i][1];
+						
+						pairs[i][1] = temp2;
+						}
+					
+				}
+				
+			  } // inner for loop
+		} // outer for loop
+		
+		for(int i = 0; i < pairs.length; i++) {
+			System.out.println(pairs[i][0]+","+pairs[i][1]);
+		}
+	   
+	} // main method
+
+} // main class
